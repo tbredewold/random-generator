@@ -1,5 +1,5 @@
 # random-generator
-*This is a random generator project*
+**This is a random generator project**
 
 The idea is to make a random generator that is powerful enough to render as many pixels, as often as possible in a random color.
 
