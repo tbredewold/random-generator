@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Generator</title>
+</head>
+<body style="background-color:#777;">
+
+<div id="frame">
+</div>
+<button style="margin:200px 10px 0 90px" onclick="stopInterval()">Stop</button>
+<button style="#margin:20px 10px" onclick="startInterval()">Start</button>
+
+<script>
+var frame = document.getElementById("frame");
+interval = setInterval(function(){
+	frame.innerHTML = "";
+	for (var y = 0; y < 37; y++) {
+		for (var x = 0; x < 47; x++) {
+			var div = document.createElement("div");
+			var random_value = Math.floor((Math.random() * 2));
+			if (random_value == 1) {var color = '#000';} else {var color = '#FFF';}
+			div.style.position = "absolute";
+			div.style.top = 30 + 4*y + "px";
+			div.style.left = 100 + 4*x + "px";
+			div.style.width = "4px";
+			div.style.height = "4px";
+			div.style.background = color;
+			frame.appendChild(div);
+		};
+	};
+}, 100);
+
+function stopInterval(){
+	clearInterval(interval);
+}
+function startInterval(){
+	location.reload();
+}
+</script>
+	
+</body>
+</html>
